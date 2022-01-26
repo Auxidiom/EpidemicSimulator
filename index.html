@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <meta charset="utf8" />
+        <title></title> 
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="crossorigin=""></script>
+    </head>
+    <body>
+        <div class="main">
+            <div>
+                <div id="mapid"></div>
+                <style>
+                    #mapid {
+                    margin: 0 auto;
+                    height: 650px; 
+                    width: 1000px;
+                    }
+                </style>
+            </div>
+            <div class="infos">
+                <h2 id="totalCases"></h2>
+                <h2 id="casesByDay"></h2>
+                <h2 id="totalDead"></h2>
+                <div class="option">
+                    <label style="color : white; font-size: 25px;">Confinement :</label><input type="checkbox" class="restriction" id="confinement" />
+                </div>
+                <div class="option">
+                    <label style="color : white; font-size: 25px;">Préventions :</label><input type="checkbox" class="restriction" id="preventions" />
+                </div>
+                <div class="option">
+                    <label style="color : white; font-size: 25px;">Masques obligatoires :</label><input type="checkbox" class="restriction" id="masques" />
+                </div>
+                <div class="option">
+                    <label style="color : white; font-size: 25px;">Ecoles fermées :</label><input type="checkbox" class="restriction" id="ecoles" />
+                </div>
+                <div class="option">
+                    <label style="color : white; font-size: 25px;">Commerces fermés :</label><input type="checkbox" class="restriction" id="commerces" />
+                </div>
+                <div class="option">
+                    <label style="color : white; font-size: 25px;">Frontières fermées :</label><input type="checkbox" class="restriction" id="frontieres" />
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <h2 id="jour"></h2>
+        <div class="bouttons">
+            <button id="nouveauJour" onclick="refreshDonnes()">Jour suivant</button>
+            <button id="plusSept" onclick="plusSept()">+7</button>
+        </div>
+    </body>
+    <script src="./data.js"></script>
+    <script src="main.js"></script>
+    
+    
+</html>
